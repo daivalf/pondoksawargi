@@ -1,11 +1,9 @@
 <?php 
 
-function hover($judul){
-	if ($judul == "Data Sewa") {
-		echo "";
-	} else {
-		echo "sewa.php";
-	}
+function dbConnect()
+{
+  $db = new mysqli("localhost", "root", "", "kost");
+  return $db;
 }
 
 function sidebar($title){
@@ -17,6 +15,14 @@ function sidebar($title){
 	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
 	<link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'>
 	<link rel="stylesheet" type="text/css" href="../../	style.css">
+
+	<script src="https://kit.fontawesome.com/53dc4b1d0b.js" crossorigin="anonymous"></script>
+
+	<style type="text/css">
+		h1{
+			font-weight: bold;
+		}
+	</style>
 </head>
 	<!-- sidebar -->
 	<nav>

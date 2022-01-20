@@ -65,13 +65,20 @@ nav .bot .nav-links a{
 }
 
 .kanan{
-	margin-left: 229px;	
+	margin-left: 240px;	
 }
 
 .keluar{
 	position: fixed;
 	width: 229px;
 	bottom: 0;
+}
+
+.card{
+	flex-direction: row;
+}
+.card img{
+	width: 35%;
 }
 
 ::-webkit-scrollbar{
