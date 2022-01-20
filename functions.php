@@ -27,7 +27,7 @@ function sidebar($title){
 	<!-- sidebar -->
 	<nav>
 		<div class="top">
-			<img src="image/default.jpg">
+			<img src="image/logo.png">
 			<!-- <h1>Halo, "Nama Penjaga"</h1> -->
 		</div>
 		<div class="bot">
