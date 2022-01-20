@@ -28,7 +28,7 @@
 		    	</tr>
 		    </table>
 		    <div align="right">
-		    	<a href="" class="btn btn-primary"><i class="fa fa-pen"></i></a>
+		    	<a href="crud_kamar/edit_kamar.php" class="btn btn-primary"><i class="fa fa-pen"></i></a>
 		    </div>
 		  </div>
 		</div>
@@ -51,7 +51,7 @@
 		    	</tr>
 		    </table>
 		    <div align="right">
-		    	<a href="" class="btn btn-primary"><i class="fa fa-pen"></i></a>
+		    	<a href="crud_kamar/edit_kamar.php" class="btn btn-primary"><i class="fa fa-pen"></i></a>
 		    </div>
 		  </div>
 		</div>

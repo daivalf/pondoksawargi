@@ -7,7 +7,6 @@ function dbConnect()
 }
 
 function sidebar($title){
-	$background = "background: 1c1e1d";
 ?>
 <head>
 
@@ -53,4 +52,29 @@ function sidebar($title){
 <?php
 }
 
+function sidebar_crud($title){
+?>
+<head>
+
+	<title><?php echo $title ?></title>
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+	<link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'>
+	<link rel="stylesheet" type="text/css" href="../../../style.css">
+
+	<script src="https://kit.fontawesome.com/53dc4b1d0b.js" crossorigin="anonymous"></script>
+
+	<style type="text/css">
+		h1{
+			font-weight: bold;
+			margin-top: 3%;
+		}
+	</style>
+</head>
+	<!-- sidebar -->
+	<nav></nav>
+	<div class="kanan">
+		<div class="container mt-3">
+	<!-- sidebar -->
+<?php
+}
  ?>
