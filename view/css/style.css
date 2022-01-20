@@ -2072,28 +2072,28 @@ fieldset:disabled a.btn {
 
 .btn-primary {
   color: #fff;
-  background-color: #007bff;
-  border-color: #007bff; }
+  background-color: #008080;
+  border-color: #008080; }
   .btn-primary:hover {
     color: #fff;
-    background-color: #0069d9;
-    border-color: #0062cc; }
+    background-color: #008080;
+    border-color: #018a8a; }
   .btn-primary:focus, .btn-primary.focus {
-    -webkit-box-shadow: 0 0 0 0.2rem rgba(38, 143, 255, 0.5);
-    box-shadow: 0 0 0 0.2rem rgba(38, 143, 255, 0.5); }
+    -webkit-box-shadow: 0 0 0 0.2rem rgba(0, 128, 128, 1);
+    box-shadow: 0 0 0 0.2rem rgba(0, 128, 128, 1); }
   .btn-primary.disabled, .btn-primary:disabled {
     color: #fff;
-    background-color: #007bff;
-    border-color: #007bff; }
+    background-color: #008080;
+    border-color: #008080; }
   .btn-primary:not(:disabled):not(.disabled):active, .btn-primary:not(:disabled):not(.disabled).active,
   .show > .btn-primary.dropdown-toggle {
     color: #fff;
-    background-color: #0062cc;
-    border-color: #005cbf; }
+    background-color: #008080;
+    border-color: #029e9e; }
     .btn-primary:not(:disabled):not(.disabled):active:focus, .btn-primary:not(:disabled):not(.disabled).active:focus,
     .show > .btn-primary.dropdown-toggle:focus {
-      -webkit-box-shadow: 0 0 0 0.2rem rgba(38, 143, 255, 0.5);
-      box-shadow: 0 0 0 0.2rem rgba(38, 143, 255, 0.5); }
+      -webkit-box-shadow: 0 0 0 0.2rem rgba(0, 128, 128, 1);
+      box-shadow: 0 0 0 0.2rem rgba(0, 128, 128, 1); }
 
 .btn-secondary {
   color: #fff;
@@ -8144,13 +8144,13 @@ a {
   -webkit-transition: .3s all ease;
   -o-transition: .3s all ease;
   transition: .3s all ease;
-  color: #8d448b; }
+  color: #008080; }
   a:hover, a:focus {
     text-decoration: none !important;
     outline: none !important;
     -webkit-box-shadow: none;
     box-shadow: none;
-    color: #8d448b; }
+    color: #008080; }
 
 h1, h2, h3, h4, h5,
 .h1, .h2, .h3, .h4, .h5 {
@@ -8160,7 +8160,7 @@ h1, h2, h3, h4, h5,
   color: #000; }
 
 .bg-primary {
-  background: #8d448b !important; }
+  background: #008080 !important; }
 
 .ftco-section {
   padding: 7em 0; }
@@ -8190,11 +8190,11 @@ h1, h2, h3, h4, h5,
   .login-wrap h3 {
     font-weight: 700;
     font-size: 20px;
-    color: #8d448b; }
+    color: #008080; }
   .login-wrap .icon {
     width: 80px;
     height: 80px;
-    background: #8d448b;
+    background: #008080;
     border-radius: 50%;
     font-size: 30px;
     margin: 0 auto;
@@ -8292,9 +8292,9 @@ h1, h2, h3, h4, h5,
 
 /* Style the checkmark/indicator */
 .checkbox-primary {
-  color: #8d448b; }
+  color: #008080; }
   .checkbox-primary input:checked ~ .checkmark:after {
-    color: #8d448b; }
+    color: #008080; }
 
 .btn {
   cursor: pointer;
@@ -8305,20 +8305,20 @@ h1, h2, h3, h4, h5,
   .btn:hover, .btn:active, .btn:focus {
     outline: none; }
   .btn.btn-primary {
-    background: #8d448b !important;
-    border: 1px solid #8d448b !important;
+    background: #008080 !important;
+    border: 1px solid #008080 !important;
     color: #fff !important; }
     .btn.btn-primary:hover {
-      border: 1px solid #8d448b;
+      border: 1px solid #008080;
       background: transparent;
-      color: #8d448b; }
+      color: #008080; }
     .btn.btn-primary.btn-outline-primary {
-      border: 1px solid #8d448b;
+      border: 1px solid #008080;
       background: transparent;
-      color: #8d448b; }
+      color: #008080; }
       .btn.btn-primary.btn-outline-primary:hover {
         border: 1px solid transparent;
-        background: #8d448b;
+        background: #008080;
         color: #fff; }
 
 .form-group {
