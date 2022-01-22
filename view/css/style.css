@@ -8332,3 +8332,10 @@ h1, h2, h3, h4, h5,
     @media (max-width: 767.98px) {
       .form-group .submit {
         top: 0; } }
+
+.floating-btn {
+    position: fixed;
+      left: 40px;
+      top: 40px;
+      font-size: 24px;
+    }
