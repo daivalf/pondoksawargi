@@ -1,9 +1,37 @@
+<script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 <?php 
+define("DEVELOPMENT" , TRUE);
 
 function dbConnect()
 {
-  $db = new mysqli("localhost", "root", "", "kost");
-  return $db;
+    $db = new mysqli("localhost", "root", "", "db_pondoksawargi");
+    return $db;
+}
+
+function showErrorSalahPassword()
+{
+	?>
+	<script>
+	Swal.fire(
+  			'ID atau Password salah',
+  			'',
+			'error'
+	);
+	</script>
+	<?php
+}
+
+function showErrorDatabase()
+{
+	?>
+	<script>
+	Swal.fire(
+  			'Database error',
+  			'Silahkan hubungi teknisi',
+			'error'
+	);
+	</script>
+	<?php
 }
 
 function sidebar($title){
@@ -41,7 +69,7 @@ function sidebar($title){
 					<a href="kamar.php"><span>Kamar</span></a>
 				</div>
 				<div class="nav-links-wrapper keluar">
-					<a href="../../index.php"><span>Keluar</span></a>
+					<a href="../../logout.php"><span>Keluar</span></a>
 				</div>
 			</div>
 		</div>
@@ -77,4 +105,4 @@ function sidebar_crud($title){
 	<!-- sidebar -->
 <?php
 }
- ?>
+?>

@@ -1,3 +1,7 @@
+<?php 
+	include_once("../functions.php")
+?>
+
 <!doctype html>
 <html lang="en">
   <head>
@@ -5,7 +9,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-	<link href="https://fonts.googleapis.com/css?family=Lato:300,400,700&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=montserrat:300,400,700&display=swap" rel="stylesheet">
 
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 	
@@ -27,14 +31,14 @@
 		      	<h2 class="text-center mb-4"><font face="Arial" color="#008080">Kos Pondok Sawargi</font></h2>
 				  <hr>
 				<h4 class="text-center mb-4"><font face="Arial" color="#008080"><b>Login</b></font></h4>
-						<form action="#" class="login-form">
+						<form method="post" action="../formlogin.php" class="login-form">
 		      		<div class="form-group">
 						  Id Pengguna
-		      			<input type="text" class="form-control rounded-left" placeholder="" required>
+		      			<input name="id_penjaga" type="text" class="form-control rounded-left" placeholder="" required>
 		      		</div>
 					  	Password
 	            <div class="form-group d-flex">	
-	              		<input type="password" class="form-control rounded-left" placeholder="" required>
+	              		<input name="password" type="password" class="form-control rounded-left" placeholder="" required>
 	            </div>
 	            <div class="form-group d-md-flex">
 
@@ -42,7 +46,7 @@
 									<a href="#"><font face="Arial" color="#008080"><u>Lupa Password?</u></font></a>
 								</div>
 								<div class="w-50 text-md-right">
-									<button type="submit" class="btn btn-primary rounded p-2 px-4">Masuk</button>
+									<button type="submit" name="TblLogin" class="btn btn-primary rounded p-2 px-4">Masuk</button>
 								</div>
 	            </div>
 	          </form>
@@ -51,7 +55,37 @@
 			</div>
 		</div>
 
-	<script src="js/jquery.min.js"></script>
+		<?php
+        if (isset($_GET["error"]))
+        {
+			$error = $_GET["error"];
+			if ($error ==1)
+			{
+            	showErrorSalahPassword();
+			}
+			else
+			if ($error == 2)
+			{
+				showErrorDatabase();
+			}
+			else
+			if ($error == 3)
+			{
+				
+			}
+			else
+			if ($error == 4)
+			{
+				
+			}
+			else
+			{
+				
+			}
+        }
+    ?>
+
+  <script src="js/jquery.min.js"></script>
   <script src="js/popper.js"></script>
   <script src="js/bootstrap.min.js"></script>
   <script src="js/main.js"></script>
