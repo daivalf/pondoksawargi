@@ -105,4 +105,18 @@ function sidebar_crud($title){
 	<!-- sidebar -->
 <?php
 }
+
+function getKamar()
+{
+  $db = dbConnect();
+  $sql = "SELECT * FROM kamar ORDER BY status_ketersediaan";
+  return $db->query($sql);
+}
+
+function getDataKamar($id_kamar)
+{
+  $db = dbConnect();
+  $sql = "SELECT * FROM kamar WHERE id_kamar = '$id_kamar'";
+  return $db->query($sql);
+}
 ?>
