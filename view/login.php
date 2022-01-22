@@ -28,9 +28,9 @@
 		      	<!-- <div class="icon d-flex align-items-center justify-content-center">
 		      		<span class="fa fa-user-o"></span>
 		      	</div> -->
-		      	<h2 class="text-center mb-4"><font face="Arial" color="#008080">Kos Pondok Sawargi</font></h2>
+		      	<h2 class="text-center mb-4"><font face="montserrat" color="#008080">Kos Pondok Sawargi</font></h2>
 				  <hr>
-				<h4 class="text-center mb-4"><font face="Arial" color="#008080"><b>Login</b></font></h4>
+				<h4 class="text-center mb-4"><font face="montserrat" color="#008080"><b>Login</b></font></h4>
 						<form method="post" action="../formlogin.php" class="login-form">
 		      		<div class="form-group">
 						  Id Pengguna
@@ -43,10 +43,10 @@
 	            <div class="form-group d-md-flex">
 
 								<div class="w-50 text-md-left">
-									<a href="#"><font face="Arial" color="#008080"><u>Lupa Password?</u></font></a>
+									<a href="#"><font face="montserrat" color="#008080"><u>Lupa Password?</u></font></a>
 								</div>
-								<div class="w-50 text-md-right">
-									<button type="submit" name="TblLogin" class="btn btn-primary rounded p-2 px-4">Masuk</button>
+								<div class="w-50 text-md-right"><font face="montserrat">
+									<button type="submit" name="TblLogin" class="btn btn-primary rounded p-2 px-4">Masuk</font></button>
 								</div>
 	            </div>
 	          </form>

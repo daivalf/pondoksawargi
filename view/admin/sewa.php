@@ -3,7 +3,7 @@
  ?>
 <!DOCTYPE html>
 <head>
-	<?php sidebar("Data Kamar"); ?>
+	<?php sidebar("Data Sewa"); ?>
 </head>
   <title></title>
   <meta charset="utf-8">
@@ -14,7 +14,7 @@
 <body>
 <div class="container mt-3">
 
-  <p class="fs-1">Data Sewa</p>
+  <h1>Data Sewa</h1>
   <table class="table table-borderedless" >
       
   <tr><td>
