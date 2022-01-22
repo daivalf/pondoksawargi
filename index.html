@@ -1,0 +1,316 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" 
+    integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css">
+    <title>Pondok Sawargi</title>
+    <style>
+
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+
+        *{
+            font-family: 'Montserrat', sans-serif;            
+        }
+
+        section{
+            padding: 60px 0;
+        }
+
+        .inner{
+            overflow: hidden;
+        }
+
+        .inner img{
+            transition: all 1.5s ease;
+        }
+
+        .inner:hover img{
+            transform: scale(1.5);
+        }
+
+        .home {
+            height: 100vh;
+            /* background-color: rgb(208, 214, 212); */
+        }
+
+        .fasilitas {
+            height: 100vh;
+        }
+
+        .lokasi {
+            height: 100vh;
+        }
+
+        .ketentuan {
+            height: 100vh;
+        }
+
+        /* .carousel {            
+            width: 100vh;;
+        } */
+
+        .floating-btn {
+            position: fixed;
+            right: 40px;
+            bottom: 40px;
+            font-size: 24px;
+        }
+        
+    </style>
+</head>
+<body>    
+    <!--navbar-->
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top bg-light">
+        <div class="container-xxl">
+            <!--toggle for sm screen-->
+            <button class="navbar-toggler" 
+            type="button" 
+            data-bs-toggle="collapse"
+            data-bs-target="#main-nav" 
+            aria-controls="main-nav" 
+            aria-expanded="false"
+            aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <!--navbar links-->
+            <div class="collapse navbar-collapse fw-bold" id="main-nav">
+                <ul class="navbar-nav me-auto text-center">
+                    <li class="nav-item">
+                        <a href="#home" class="nav-link" >Home</a>
+                    </li>
+                    <li class=" nav-item ms-4">
+                        <a href="#fasilitas" class="nav-link">Fasilitas</a>
+                    </li>
+                    <li class=" nav-item ms-4">
+                        <a href="#lokasi" class="nav-link">Lokasi</a>
+                    </li>
+                    <li class=" nav-item ms-4">
+                        <a href="#ketentuan" class="nav-link">Ketentuan Kos</a>
+                    </li>
+                    <li class="nav-item d-md-none">
+                        <a href="#login" class="nav-link">Login Penjaga</a>
+                    </li>
+                </ul>
+                <ul class="navbar-nav mr-auto">
+                    <li class="class nav-item ms-2 d-none d-md-inline">
+                            <a href="#login" class="btn btn-secondary">Login Penjaga</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!--main menu-->
+    <section id="home" class="home mt-3">       
+        <div class="container-lg">          
+            <div class="row justify-content-center align-items-center">
+                <div class="col-md-12 text-center text-md-center">
+                    <h1>
+                        <div class="display-1">PONDOK SAWARGI</div>
+                        <div class="display-3 my-2">Kosan Aman dan Nyaman di Bandung</div>
+                        <div class="display-6 text-muted">Lebak Gede, Coblong, Kota Bandung, Jawa Barat 40132</div>
+                    </h1>                   
+                </div>
+                <!-- <div class="col-md-4 mx-5 text-center d-none d-md-block">
+                    <img class="img-fluid" src="/assets/logo-pondok-sawargi.png" alt="logo">
+                </div>     -->
+                <!--carousel start-->
+                
+                <!--carousel end-->            
+            </div>        
+        </div>
+        <div id="carouselExampleDark" class="carousel carousel-dark slide w-50 mt-5 mx-auto" data-bs-ride="carousel">
+            <div class="carousel-indicators">
+              <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+              <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1" aria-label="Slide 2"></button>
+              <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="2" aria-label="Slide 3"></button>
+            </div>
+            <div class="carousel-inner">
+              <div class="carousel-item active" data-bs-interval="10000">
+                <img src="/assets/car_atap_16x9.jpg" class="d-block w-100" alt="...">
+              </div>
+              <div class="carousel-item" data-bs-interval="2000">
+                <img src="/assets/car_tangga_16x9.jpg" class="d-block w-100" alt="...">                
+              </div>
+              <div class="carousel-item" data-bs-interval="2000">
+                <img src="/assets/car_lorong_16x9.jpg" class="d-block w-100" alt="...">                
+              </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Next</span>
+            </button>
+          </div>
+    </section>
+
+    <section id="carousel" class="carousel">
+        
+    </section>
+    
+    <!--card fasilitas-->
+    <section id="fasilitas" class="bg-light mb-20">
+        <div class="container-lg">            
+            <div class="text-center">
+                <h2>Fasilitas Kos</h2>
+            </div>
+
+            <div class="row my-5 align-items-center justify-content-center">                                
+
+                <div class="col-8 col-lg-3 col-xl-3 mx-3 my-4">
+                    <div class="inner">
+                    <img src="/assets/garasi.jpg" class="card-img-top" alt="Garasi">
+                    </div>
+                    <div class="card border-0 shadow">
+                        <div class="card-body text-center py-4">
+                            <h5 class="card-title">Garasi</h5>
+                            <p class="card-text">Garasi dapat menampung hinnga 10 Motor. Garasi juga aman karena akses gembok keluar masuk hanya diketahui penghuni kos dan penjaga.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-8 col-lg-3 col-xl-3 mx-3 my-4">
+                    <div class="inner">
+                    <img src="/assets/kamarA.jpg" class="card-img-top" alt="Kamar">
+                    </div>
+                    <div class="card border-0 shadow">
+                        <div class="card-body text-center py-4">
+                            <h4 class="card-title">Kamar tipe A</h4>
+                            <p class="card-text">Kamar tipe A memiliki ukuran 4x3m. Dalam kamar tipe ini, tersedia meja dan kursi belajar, lemari, kasur, serta kamar mandi dalam. </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-8 col-lg-3 col-xl-3 mx-3 my-4">
+                    <div class="inner">
+                    <img src="/assets/kamarB.jpg" class="card-img-top" alt="Kamar">
+                    </div>
+                    <div class="card border-0 shadow">
+                        <div class="card-body text-center py-4">
+                            <h4 class="card-title">Kamar tipe B</h4>
+                            <p class="card-text">Kamar tipe B memiliki ukuran 3x3m. Dalam kamar tipe ini, tersedia meja dan kursi belajar, lemari, kasur, namun kamar mandi luar. </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-8 col-lg-3 col-xl-3 mx-3 my-4">
+                    <div class="inner">
+                        <img src="/assets/dapur.jpg" class="card-img-top" alt="Dapur">
+                    </div>
+                    <div class="card border-0 shadow">
+                        <div class="card-body text-center py-4">
+                            <h4 class="card-title">dapur</h4>
+                            <p class="card-text">Dapur untuk penghuni kos dengan kelengkapan seperti alat masak, dispenser, kompor gas, wastafel, sehingga cocok jika ingin memasak.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-8 col-lg-3 col-xl-3 mx-3 my-4">
+                    <div class="inner">
+                        <img src="/assets/rooftop.jpg" class="card-img-top" alt="Rooftop">
+                    </div>
+                    <div class="card border-0 shadow">
+                        <div class="card-body text-center py-4">
+                            <h4 class="card-title">rooftop</h4>
+                            <p class="card-text">Lantai 3 dari kos Pondok Sawargi ini digunakan sebagai tempat menjemur pakaian, terdapat juga tempat teduh untuk menyimpan pakaian yang dijemur agar tidak kehujanan saat ditinggal.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-8 col-lg-3 col-xl-3 mx-3 my-4">
+                    <div class="inner">
+                        <img src="/assets/air.png" class="card-img-top" alt="Rooftop">
+                    </div>
+                    <div class="card border-0 shadow">
+                        <div class="card-body text-center py-4">
+                            <h4 class="card-title">Listrik, Air, WiFi</h4>
+                            <p class="card-text">Harga yang dibayarkan sudah termasuk harga Listrik, Air, dan Internet</p>
+                        </div>
+                    </div>
+                </div>
+                
+
+            </div>
+        </div>
+    </section>
+
+    <!-- lokasi-->
+    <section id="lokasi" class="lokasi mb-20">
+        <div class="container-lg">
+            <div class="text-center">
+                <h2>Lokasi</h2>
+                <div class="card mb-3 mt-5">
+                    <iframe align="center" width="100%" height="450px" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3961.00799375479!2d107.61723831532446!3d-6.889644969334631!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e68e654e3e10991%3A0x5e8a24f8a6b9c9b8!2sPondok%20Sawargi!5e0!3m2!1sen!2sid!4v1642771439043!5m2!1sen!2sid" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>                   
+                    <div class="card-body">
+                      <h5 class="h2 card-title">Kos Pondok Sawargi</h5>
+                      <p class="h4 card-text text-muted">Pondok Sawargi 29c Kosan Aman dan Nyaman di Bandung, Lebak Gede, Coblong, Bandung, Jawa Barat 40132</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!--ketentuan-->
+    <section id="ketentuan" class="ketentuan mb-20 bg-light">
+        <div class="container-lg">
+            <div class="text-center">
+                <h2>Ketentuan Kos</h2>
+                <div class="card w-100 mt-4 shadow">
+                    <div class="card-body">
+                      <!-- <h5 class="card-title">Card title</h5> -->
+                      <p class="card-text bi bi-clock"></p>
+                      <p class="card-text"> Tamu Tidak Lebih Dari Jam 23.00</p>   
+                    </div>
+                </div>
+
+                <div class="card w-100 mt-4 shadow">
+                    <div class="card-body ">
+                      <!-- <h5 class="card-title">Card title</h5> -->
+                      <p class="card-text bi bi-house"></p>
+                      <p class="card-text"> Satu Kamar Hanya Diisi Oleh Satu Orang</p>
+                    </div>
+                </div>
+                
+                <div class="card w-100 mt-4 shadow">
+                    <div class="card-body ">
+                      <!-- <h5 class="card-title">Card title</h5> -->
+                      <p class="card-text bi bi-lock"></p>
+                      <p class="card-text"> Tidak Memberitahu Kode Gembok Ke Selain Penghuni</p>
+                    </div>
+                </div>
+
+                <div class="card w-100 mt-4 shadow">
+                    <div class="card-body ">
+                      <!-- <h5 class="card-title">Card title</h5> -->
+                      <p class="card-text bi bi-exclamation-diamond"></p>
+                      <p class="card-text"> Dilarang Merokok di Kamar</p>                   
+                    </div>
+                </div>
+
+                <div class="card w-100 mt-4 shadow">
+                    <div class="card-body ">
+                      <!-- <h5 class="card-title">Card title</h5> -->
+                      <p class="card-text bi bi-calendar-date"></p>
+                      <p class="card-text"> Kamar Hanya Bisa Disewa Pertahun</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- <a href="https://wa.me/+62895341745765" class="floating-btn">Contact us</a> -->
+
+    <a href="https://wa.me/+62895341745765" class="btn btn-success bi bi-whatsapp floating-btn"> Contact Us</a>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" 
+    integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+</body>
+</html>
