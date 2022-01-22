@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jan 21, 2022 at 06:08 PM
+-- Generation Time: Jan 22, 2022 at 12:33 PM
 -- Server version: 10.4.18-MariaDB
 -- PHP Version: 8.0.3
 
@@ -49,7 +49,8 @@ CREATE TABLE `penghuni` (
   `jenis_kelamin` enum('Pria','Wanita') NOT NULL,
   `no_ktp` varchar(16) NOT NULL,
   `no_telp_wali` varchar(15) NOT NULL,
-  `nama_wali` varchar(50) NOT NULL
+  `nama_wali` varchar(50) NOT NULL,
+  `status_aktif` enum('Aktif','Tidak') NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- --------------------------------------------------------
@@ -64,6 +65,13 @@ CREATE TABLE `penjaga` (
   `no_telp` varchar(15) NOT NULL,
   `password` varchar(15) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `penjaga`
+--
+
+INSERT INTO `penjaga` (`id_penjaga`, `nama_penjaga`, `no_telp`, `password`) VALUES
+('Admin1', 'Cucu Husdiana', '085222243899', 'cucu29c');
 
 -- --------------------------------------------------------
 
