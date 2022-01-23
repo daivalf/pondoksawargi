@@ -21,7 +21,7 @@
 </div>
   </div>
   <td><button type="button" class="btn btn-outline-secondary btn-lg">Cari</button></td>
-  <td align="right"><button type="button" class="btn btn-outline-secondary btn-lg">Tambah</button></td>
+  <td align="right"><a href="crud_sewa/tambah_sewa.php" type="button" class="btn btn-outline-secondary btn-lg">Tambah</button></td>
 </form>
 </table>
   <center>            
@@ -42,8 +42,7 @@
         <td>asda</td>
         <td>xcacas</td>
         <td>asdawa</td>
-        <td><div align="right">
-		    	<a href="" class="btn btn-primary"><i class="fa fa-pen"></i></a>
+        <td><div align="right"><a href="crud_sewa/edit_sewa.php" class="btn btn-primary"><i class="fa fa-pen"></i></a>
 		    </div></td>
       </tr>
       <tr>
@@ -53,7 +52,7 @@
         <td></td>
         <td></td>
         <td></td>
-        <td><div align="right"><a href="" class="btn btn-primary"><i class="fa fa-pen"></i></a></div></td>
+        <td><div align="right"><a href="crud_sewa/edit_sewa.php" class="btn btn-primary"><i class="fa fa-pen"></i></a></div></td>
       </tr>
       <tr>
         <td></td>
@@ -62,7 +61,7 @@
         <td></td>
         <td></td>
         <td></td>
-        <td><div align="right"><a href="" class="btn btn-primary"><i class="fa fa-pen"></i></a></div></td>
+        <td><div align="right"><a href="crud_sewa/edit_sewa.php" class="btn btn-primary"><i class="fa fa-pen"></i></a></div></td>
       </tr>
   </table>
     </center>
