@@ -14,7 +14,7 @@ function showErrorSalahPassword()
 	<script>
 	Swal.fire(
   			'ID atau Password salah',
-  			'',
+  			'Silahkan coba kembali',
 			'error'
 	);
 	</script>
@@ -28,6 +28,45 @@ function showErrorDatabase()
 	Swal.fire(
   			'Database error',
   			'Silahkan hubungi teknisi',
+			'error'
+	);
+	</script>
+	<?php
+}
+
+function showErrorKoneksi()
+{
+	?>
+	<script>
+	Swal.fire(
+  			'Koneksi ke Database gagal',
+  			'Silahkan hubungi teknisi',
+			'error'
+	);
+	</script>
+	<?php
+}
+
+function showErrorBelumLogin()
+{
+	?>
+	<script>
+	Swal.fire(
+  			'Tidak bisa mengakses halaman',
+  			'Silahkan login terlebih dahulu',
+			'error'
+	);
+	</script>
+	<?php
+}
+
+function showErrorUnknown()
+{
+	?>
+	<script>
+	Swal.fire(
+  			'Error tidak diketahui',
+  			'',
 			'error'
 	);
 	</script>
@@ -69,7 +108,7 @@ function sidebar($title){
 					<a href="kamar.php"><span>Kamar</span></a>
 				</div>
 				<div class="nav-links-wrapper keluar">
-					<a href="../../logout.php"><span>Keluar</span></a>
+					<a href="../logout.php"><span>Keluar</span></a>
 				</div>
 			</div>
 		</div>

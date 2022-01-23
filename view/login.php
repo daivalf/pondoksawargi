@@ -34,7 +34,7 @@
 		      	<h2 class="text-center mb-4"><font face="montserrat" color="#008080">Kos Pondok Sawargi</font></h2>
 				  <hr>
 				<h4 class="text-center mb-4"><font face="montserrat" color="#008080"><b>Login</b></font></h4>
-						<form method="post" action="../formlogin.php" class="login-form">
+						<form method="post" action="formlogin.php" class="login-form">
 		      		<div class="form-group">
 						  Id Pengguna
 		      			<input name="id_penjaga" type="text" class="form-control rounded-left" placeholder="" required>
@@ -74,16 +74,16 @@
 			else
 			if ($error == 3)
 			{
-				
+				showErrorKoneksi();
 			}
 			else
 			if ($error == 4)
 			{
-				
+				showErrorBelumLogin();
 			}
 			else
 			{
-				
+				showErrorUnknown();
 			}
         }
     ?>

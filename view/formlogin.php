@@ -1,5 +1,5 @@
 <?php
-    include_once("functions.php");
+    include("../functions.php");
 ?>
 <?php
     $db = dbConnect();
@@ -19,19 +19,19 @@
                 session_start();
                 $_SESSION["id_penjaga"] = $data["id_penjaga"];
                 $_SESSION["nama_penjaga"] = $data["nama_penjaga"];
-                header("Location: view/admin/sewa.php");
+                header("Location: admin/sewa.php");
             }
             else 
             {
-                header("Location: view/login.php?error=1");
+                header("Location: login.php?error=1");
             }
         }
         else 
         {
-            header("Location: view/login.php?error=2");
+            header("Location: login.php?error=2");
         }
     }
     else {
-        header("Location: view/login.php?error=3");
+        header("Location: login.php?error=3");
     }
 ?>
