@@ -8,6 +8,32 @@ function dbConnect()
     return $db;
 }
 
+function showPin()
+{
+	?>
+	<script>
+	Swal.fire(
+  			'Kode pin berhasil diterima',
+  			'Password untuk akun Admin1 adalah cucu29c',
+			'success'
+	);
+	</script>
+	<?php
+}
+
+function showPinSalah()
+{
+	?>
+	<script>
+	Swal.fire(
+  			'PIN untuk Password salah',
+  			'Silahkan coba kembali',
+			'error'
+	);
+	</script>
+	<?php
+}
+
 function showErrorSalahPassword()
 {
 	?>

@@ -31,23 +31,15 @@
 		      			<img width="40%" height="40%" src="../assets/logo-pondok-sawargi.png" class="img-fluid mx-auto d-block">
 		      	<h2 class="text-center mb-4 mt-4"><font face="montserrat" color="#008080">Kos Pondok Sawargi</font></h2>
 				  <hr>
-				<h4 class="text-center mb-4"><font face="montserrat" color="#008080"><b>Login</b></font></h4>
-				<form method="post" action="formlogin.php" class="login-form">
+				<h4 class="text-center mb-4"><font face="montserrat" color="#008080"><b>Silahkan masukkan pin</b></font></h4>
+				<form method="post" class="login-form">
 		      		<div class="form-group">
-						  Id Pengguna
-		      			<input name="id_penjaga" type="text" class="form-control rounded-left" placeholder="" required>
+						<div class="text-center">PIN</div>
+		      			<input name="pin" type="password" class="form-control rounded-left mx-auto d-block" placeholder="" required>
 		      		</div>
-					  	Password
-	            <div class="form-group d-flex">	
-	              		<input name="password" type="password" class="form-control rounded-left" placeholder="" required>
-	            </div>
-	            <div class="form-group d-md-flex">
-
-								<div class="w-50 text-md-left">
-									<a href="lupa_password.php"><font face="montserrat" color="#008080"><u>Lupa Password?</u></font></a>
-								</div>
-								<div class="w-50 text-md-right"><font face="montserrat">
-									<button type="submit" name="TblLogin" class="btn btn-primary rounded p-2 px-4">Masuk</font></button>
+	            <div class="form-group d-flex">
+								<div class="mx-auto d-block"><font face="montserrat">
+									<button type="submit" name="TblSubmit" class="btn btn-primary rounded p-2 px-4">Submit</font></button>
 								</div>
 	            </div>
 	          </form>
@@ -58,34 +50,21 @@
 			</div>
 		</div>
 
-		<?php
-        if (isset($_GET["error"]))
+        <?php
+        if (isset($_POST["TblSubmit"]))
         {
-			$error = $_GET["error"];
-			if ($error ==1)
-			{
-            	showErrorSalahPassword();
-			}
-			else
-			if ($error == 2)
-			{
-				showErrorDatabase();
-			}
-			else
-			if ($error == 3)
-			{
-				showErrorKoneksi();
-			}
-			else
-			if ($error == 4)
-			{
-				showErrorBelumLogin();
-			}
-			else
-			{
-				showErrorUnknown();
-			}
+            $pin = $_POST["pin"];
+            $jawaban = "01269";
+            if ($pin == $jawaban)
+            {
+                showPin();
+            }
+            else
+            {
+                showPinSalah();
+            }
         }
+        ?>
     ?>
 
   <script src="js/jquery.min.js"></script>
@@ -93,7 +72,7 @@
   <script src="js/bootstrap.min.js"></script>
   <script src="js/main.js"></script>
 
-  <a href="../index.html" class="btn btn-outline-secondary floating-btn">Kembali</a>
+  <a href="login.php" class="btn btn-outline-secondary floating-btn">Kembali</a>
 
 	</body>
 </html>
