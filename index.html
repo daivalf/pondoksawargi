@@ -33,23 +33,28 @@
 
         .home {
             height: auto;
-            /* background-color: rgb(208, 214, 212); */
+            position: relative;
+            background: url(/assets/home_background_3.jpg);
+            background-size: cover;
+            background-position: center;
         }
 
         .fasilitas {
-            height: auto;
+            height: 100vh;
         }
 
         .lokasi {
-            height: auto;
+            height: 100vh;
         }
 
         .ketentuan {
-            height: auto;
+            height: 100vh;
         }
 
-        /* .carousel {            
-            width: 100vh;;
+        /* .carousel-item {    
+            object-fit: cover;        
+            object-position: center;
+            height: 50vh;
         } */
 
         .floating-btn {
@@ -105,25 +110,19 @@
     </nav>
 
     <!--main menu-->
-    <section id="home" class="home mt-3">       
+    <section id="home" class="home mt-3">                 
         <div class="container-lg">          
             <div class="row justify-content-center align-items-center">
                 <div class="col-md-12 text-center text-md-center">
                     <h1>
                         <div class="display-1">PONDOK SAWARGI</div>
-                        <div class="display-3 my-2">Kosan Aman dan Nyaman di Bandung</div>
+                        <div class="display-4 my-2">Kosan Aman dan Nyaman di Bandung</div>
                         <div class="display-6 text-muted">Lebak Gede, Coblong, Kota Bandung, Jawa Barat 40132</div>
                     </h1>                   
-                </div>
-                <!-- <div class="col-md-4 mx-5 text-center d-none d-md-block">
-                    <img class="img-fluid" src="/assets/logo-pondok-sawargi.png" alt="logo">
-                </div>     -->
-                <!--carousel start-->
-                
-                <!--carousel end-->            
+                </div>       
             </div>        
         </div>
-        <div id="carouselExampleDark" class="carousel carousel-dark slide w-50 mt-5 mx-auto" data-bs-ride="carousel">
+        <div id="carouselExampleDark" class="carousel carousel-dark slide w-50 mt-5 mx-auto shadow-lg" data-bs-ride="carousel">
             <div class="carousel-indicators">
               <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
               <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1" aria-label="Slide 2"></button>
@@ -131,13 +130,13 @@
             </div>
             <div class="carousel-inner">
               <div class="carousel-item active" data-bs-interval="10000">
-                <img src="assets/car_atap_16x9.jpg" class="d-block w-100" alt="...">
+                <img src="assets/car_lorong_16x9.jpg" class="d-block w-100" alt="...">
               </div>
               <div class="carousel-item" data-bs-interval="2000">
                 <img src="assets/car_tangga_16x9.jpg" class="d-block w-100" alt="...">                
               </div>
               <div class="carousel-item" data-bs-interval="2000">
-                <img src="assets/car_lorong_16x9.jpg" class="d-block w-100" alt="...">                
+                <img src="assets/car_atap_16x9.jpg" class="d-block w-100" alt="...">                
               </div>
             </div>
             <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="prev">
@@ -149,10 +148,6 @@
               <span class="visually-hidden">Next</span>
             </button>
           </div>
-    </section>
-
-    <section id="carousel" class="carousel">
-        
     </section>
     
     <!--card fasilitas-->
