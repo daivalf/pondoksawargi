@@ -30,7 +30,7 @@
 
       <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
       <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-      <script type="text/javascript" src="js/sweet.js"></script>
+      <script type="text/javascript" src="js/sweethapus.js"></script>
   <body>
       <div class="container mt-3">
       
@@ -109,7 +109,7 @@
 
           <td><div><a href="crud_penghuni/edit_penghuni.php" class="btn btn-primary"><i class="fa fa-pen"></i></a>
 
-          <button class="btnn rounded" onclick="sweet();"><i class="fa fa-trash"></i></button></a></div>
+          <button class="btnn rounded" onclick="sweethapus();"><i class="fa fa-trash"></i></button></a></div>
           </td>
         </tr>
           <?php
