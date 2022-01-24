@@ -29,7 +29,8 @@
   </head>
 
       <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
-  
+      <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+      <script type="text/javascript" src="js/sweet.js"></script>
   <body>
       <div class="container mt-3">
       
@@ -100,15 +101,15 @@
           <td><?php echo $datadiri["no_telp"];?></td>
           <td><?php echo $datadiri["alamat_asal"];?></td>
           <td><?php echo $datadiri["tanggal_lahir"];?></td>
-          <td><?php echo $datadiri["jenis_kelamin"];?></td>
+          <td align="center"><?php echo $datadiri["jenis_kelamin"];?></td>
           <td><?php echo $datadiri["no_ktp"];?></td>
           <td><?php echo $datadiri["no_telp_wali"];?></td>
           <td><?php echo $datadiri["nama_wali"];?></td>
-          <td><?php echo $datadiri["status_aktif"];?></td>
+          <td align="center"><?php echo $datadiri["status_aktif"];?></td>
 
           <td><div><a href="crud_penghuni/edit_penghuni.php" class="btn btn-primary"><i class="fa fa-pen"></i></a>
 
-          <a href="crud_penghuni/konfirmasi_hapus_penghuni.php?id_penghuni=<?php echo $datadiri["id_penghuni"];?>"><button class="btnn rounded"><i class="fa fa-trash"></i></button></a></div>
+          <button class="btnn rounded" onclick="sweet();"><i class="fa fa-trash"></i></button></a></div>
           </td>
         </tr>
           <?php
@@ -123,5 +124,6 @@
 else
 	echo "Gagal koneksi".(DEVELOPMENT?" : ".$db->connect_error:"")."<br>";
 ?>
+
   </body>
-  </html>
+</html>
