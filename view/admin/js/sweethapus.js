@@ -1,4 +1,4 @@
-function sweet() {
+function sweethapus() {
     Swal.fire({
         title: 'Apakah anda yakin akan menghapus data penghuni?',
         text: "Data yang dihapus tidak akan kembali",
