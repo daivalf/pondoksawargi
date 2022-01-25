@@ -3,10 +3,10 @@
 
 	if (isset($_POST["simpan"])) {
 		$db = dbConnect();
-		$id_kamar	= $_POST["id_kamar"];
-		$tipe			= $_POST["tipe"];
-		$harga		= $_POST["harga"];
-		$status		= $_POST["status"];
+		$id_kamar	= $db->escape_string($_POST["id_kamar"]);
+		$tipe		= $db->escape_string($_POST["tipe"]);
+		$harga		= $db->escape_string($_POST["harga"]);
+		$status		= $db->escape_string($_POST["status"]);
 
 		$sql = "UPDATE kamar SET id_kamar='$id_kamar',tipe='$tipe',harga_tahunan='$harga',status_ketersediaan='$status'
 					  WHERE id_kamar ='$id_kamar'";

@@ -22,7 +22,7 @@
 					<td width="10%"></td>
 				</tr>
 				<tr style="height: 80px">
-					<td><input type="text" name="id_kamar" class="form-control" value="<?php echo $data["id_kamar"] ?>"></td>
+					<td><input type="text" name="id_kamar" class="form-control" value="<?php echo $data["id_kamar"] ?>" readonly></td>
 					<td></td>
 					<td><input type="number" name="harga" class="form-control" value="<?php echo $data["harga_tahunan"] ?>"></td>
 				</tr>
@@ -32,10 +32,7 @@
 					<td>Status Ketersediaan</td>
 				</tr>
 				<tr style="height: 70px">
-					<td><select class="form-select" name="tipe">
-						<option <?php echo ($data["tipe"] == "Tipe A"?"selected":"") ?>>Tipe A</option>
-						<option <?php echo ($data["tipe"] == "Tipe B"?"selected":"") ?>>Tipe B</option>
-					</select></td>
+					<td><input type="text" name="tipe" class="form-control" value="<?php echo ($data["tipe"]); ?>" readonly	></td>
 					<td></td>
 					<td><select class="form-select" name="status">
 						<option <?php echo ($data["status_ketersediaan"] == "Tersedia"?"selected":"") ?>>Tersedia</option>
