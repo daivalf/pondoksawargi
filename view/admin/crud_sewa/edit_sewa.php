@@ -27,8 +27,8 @@
       <tr><td><input name="" type="text"></input></td>
           <td><input name="" type="date"></input></td></tr>
 
-      <tr><td>Id Penjanga</td>
-          <td>Status</td>
+      <tr><td>Id Penjaga</td>
+          <td>Status Lunas</td>
       <tr><td><input name="" type="text"></input></td>
           <td><input name="" type="text"></input></td></tr>
 
