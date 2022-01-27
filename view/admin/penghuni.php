@@ -1,3 +1,10 @@
+<?php
+    session_start();
+    if (!isset($_SESSION["id_penjaga"])) 
+    {
+        header("Location: ../login.php?error=4");
+    }
+?>
 <?php 
 	include_once("../../functions.php");
   ?>
@@ -9,23 +16,6 @@
     <?php 
     sidebar("Data Penghuni"); 
     ?>
-
-  <style>
-  .btnn {
-    background-color: red;
-    border: none;
-    padding: 7px 14px;
-    font-size: 16px;
-    color: white;
-    cursor: pointer;
-  }
-
-  /* warna menghitam jika ada kursor */
-  .btnn:hover {
-    background-color: brown;
-  }
-  </style>
-
   </head>
 
       <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
@@ -113,9 +103,15 @@
             <td align="center"><?php echo $datadiri["status_aktif"];?></td>
   
             <td><div><a href="crud_penghuni/edit_penghuni.php" class="btn btn-primary"><i class="fa fa-pen"></i></a>
-  
-            <button class="btnn rounded" onclick="sweethapus();"><i class="fa fa-trash"></i></button></a></div>
-            </td>
+          </td>
+          <td>
+          <form method="post">
+          <a href="penghuni.php?id_penghuni=<?php echo $datadiri["id_penghuni"]; ?>">
+          <button class="btn btn-danger" type="submit" name="TblHapus"><i class="fa fa-trash"></i></button>
+          </a>
+          </form>
+          </div>
+          </td>
           </tr>
             <?php
             }
@@ -152,7 +148,7 @@
           <th>Nomor Wali</th>
           <th>Nama Wali</th>
           <th>Status Aktif</th>
-          <th>Edit/Hapus</th>
+          <th colspan="2">Aksi</th>
         </tr>
 
                   <?php
@@ -172,10 +168,14 @@
           <td align="center"><?php echo $datadiri["status_aktif"];?></td>
 
           <td><div><a href="crud_penghuni/edit_penghuni.php" class="btn btn-primary"><i class="fa fa-pen"></i></a>
-
-          <button class="btnn rounded" onclick="sweethapus();"><i class="fa fa-trash"></i></button></a></div>
           </td>
-        </tr>
+          <td>
+          <a href="penghuni.php?id_penghuni=<?php echo $datadiri["id_penghuni"]; ?>">
+          <button class="btn btn-danger" type="submit" name="TblHapus"><i class="fa fa-trash"></i></button>
+          </a>
+          </div>
+          </td>
+          </tr>
           <?php
           }
           ?>
@@ -189,6 +189,41 @@
 else
 	echo "Gagal koneksi".(DEVELOPMENT?" : ".$db->connect_error:"")."<br>";
 ?>
+
+<?php
+        if (isset($_GET["id_penghuni"]))
+        {
+          showMessageHapus();
+          $db = dbConnect();
+          if ($db->connect_errno == 0) 
+          {
+              $id_penghuni = $_GET["id_penghuni"];
+              // susun query delete
+              $sql = "DELETE FROM penghuni WHERE id_penghuni='$id_penghuni'";
+              // eksekusi query
+              $res = $db->query($sql);
+              if ($res) 
+              {
+                  if ($db->affected_rows > 0) // jika ada data terhapus
+                  {
+                      showBerhasilHapus();
+                  }
+                  else // jika sql sukses tapi tidak ada data dihapus
+                  {
+                      showGagalHapus();
+                  }
+              }
+              else // gagal query
+              {
+                  echo "Data gagal dihapus <br><br>";
+              }
+          }
+          else 
+          {
+              echo "Gagal koneksi" . (DEVELOPMENT ? " : " . $db->connect_error : "") . "<br>";
+          }
+      }
+        ?>
 
   </body>
 </html>
