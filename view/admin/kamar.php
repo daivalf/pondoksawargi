@@ -24,13 +24,9 @@
 			if (isset($_GET["status"])) {
 				$status = $_GET["status"];
 				if ($status == 1) {
-					echo "<p class='text-white bg-success' style='padding: 5px; border-radius: 5px; width: 80%'>
-		        			<i class='fa fa-check'></i> Data Berhasil Diubah
-		  					</p>";
+					showSuksesEdit();
 				} else {
-					echo "<p class='text-dark bg-warning' style='padding: 5px; border-radius: 5px; width: 80%'>
-		        			<i class='fa fa-warning'></i> Data Tidak Berubah!
-		  					</p>";
+					showGagalEdit();
 				}
 			}
 		 ?>

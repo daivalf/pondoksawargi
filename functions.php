@@ -151,6 +151,51 @@ function showErrorUnknown()
 	<?php
 }
 
+function showSuksesEdit()
+{
+	?>
+	<script>
+	Swal.fire(
+  			'Perubahan Data Kamar Berhasil',
+  			'',
+			'success'
+	);
+	</script>
+	<?php
+}
+
+function showGagalEdit()
+{
+	?>
+	<script>
+	Swal.fire(
+  			'Data Kamar Tidak Berubah!',
+  			'',
+			'warning'
+	);
+	</script>
+	<?php
+}
+
+function showKonfirmasiUbahData(){
+	?>
+	<script>
+	Swal.fire({
+	  title: 'Apakah anda yakin akan menyimpan perubahan pada data kamar?',
+	  showDenyButton: true,
+	  showCancelButton: true,
+	  confirmButtonText: 'Simpan',
+	  denyButtonText: 'Batal',
+	}).then((result) => {
+	  /* Read more about isConfirmed, isDenied below */
+	  if (result.isConfirmed) {
+	    window.location = "redirectURL";
+	  }
+	})
+	</script>
+	<?php	
+}
+
 function sidebar($title){
 ?>
 <head>
