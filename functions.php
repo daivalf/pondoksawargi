@@ -202,10 +202,12 @@ function sidebar_crud($title){
 <head>
 
 	<title><?php echo $title ?></title>
+	<meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" type="text/css" href="../../../style.css">
+  <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'>
 	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
-	<link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'>
-	<link rel="stylesheet" type="text/css" href="../../../style.css">
-
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
 	<script src="https://kit.fontawesome.com/53dc4b1d0b.js" crossorigin="anonymous"></script>
 
 	<style type="text/css">
@@ -234,6 +236,27 @@ function getDataKamar($id_kamar)
 {
   $db = dbConnect();
   $sql = "SELECT * FROM kamar WHERE id_kamar = '$id_kamar'";
+  return $db->query($sql);
+}
+
+function getPenghuni()
+{
+  $db = dbConnect();
+  $sql = "SELECT * FROM penghuni";
+  return $db->query($sql);
+}
+
+function getDataSewa($id_penghuni)
+{
+  $db = dbConnect();
+  $sql = "SELECT * FROM sewa WHERE id_penghuni = '$id_penghuni'";
+  return $db->query($sql);
+}
+
+function getPenjaga()
+{
+  $db = dbConnect();
+  $sql = "SELECT * FROM penjaga";
   return $db->query($sql);
 }
 ?>
