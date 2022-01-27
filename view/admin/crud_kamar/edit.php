@@ -8,7 +8,7 @@
 <?php 
 	include("../../../functions.php");
 
-	if (isset($_POST["simpan"])) {
+	if (isset($_POST["id_kamar"])) {
 		$db = dbConnect();
 		$id_kamar	= $db->escape_string($_POST["id_kamar"]);
 		$tipe		= $db->escape_string($_POST["tipe"]);

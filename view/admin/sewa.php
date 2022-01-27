@@ -92,7 +92,9 @@
             <td align="center"><?php echo $datadiri["tanggal_perpanjangan"];?></td>
             <td align="center"><?php echo $datadiri["hargasewa"];?></td>
             <td align="center"><?php echo $datadiri["status_lunas"];?></td>
-            <td><div align="center"><a href="crud_sewa/edit_sewa.php" class="btn btn-primary"><i class="fa fa-pen"></i></a></div></td>
+            <td>
+              <div align="center"><a href="crud_sewa/edit_sewa.php?id_penghuni=<?php echo $datadiri['id_penghuni']; ?>" class="btn btn-primary">
+              <i class="fa fa-pen"></i></a></div></td>
             </tr>
   
             <?php
@@ -146,7 +148,8 @@
           <td align="center"><?php echo $datadiri["tanggal_perpanjangan"];?></td>
           <td align="center"><?php echo $datadiri["hargasewa"];?></td>
           <td align="center"><?php echo $datadiri["status_lunas"];?></td>
-          <td><div align="center"><a href="crud_sewa/edit_sewa.php" class="btn btn-primary"><i class="fa fa-pen"></i></a></div></td>
+          <td>
+            <div align="center"><a href="crud_sewa/edit_sewa.php?id_penghuni=<?php echo $datadiri['id_penghuni']; ?>" class="btn btn-primary"><i class="fa fa-pen"></i></a></div></td>
           </tr>
 
           <?php

@@ -151,6 +151,51 @@ function showErrorUnknown()
 	<?php
 }
 
+function showSuksesEdit()
+{
+	?>
+	<script>
+	Swal.fire(
+  			'Perubahan Data Kamar Berhasil',
+  			'',
+			'success'
+	);
+	</script>
+	<?php
+}
+
+function showGagalEdit()
+{
+	?>
+	<script>
+	Swal.fire(
+  			'Data Kamar Tidak Berubah!',
+  			'',
+			'warning'
+	);
+	</script>
+	<?php
+}
+
+function showKonfirmasiUbahData(){
+	?>
+	<script>
+	Swal.fire({
+	  title: 'Apakah anda yakin akan menyimpan perubahan pada data kamar?',
+	  showDenyButton: true,
+	  showCancelButton: true,
+	  confirmButtonText: 'Simpan',
+	  denyButtonText: 'Batal',
+	}).then((result) => {
+	  /* Read more about isConfirmed, isDenied below */
+	  if (result.isConfirmed) {
+	    window.location = "redirectURL";
+	  }
+	})
+	</script>
+	<?php	
+}
+
 function sidebar($title){
 ?>
 <head>
@@ -202,10 +247,12 @@ function sidebar_crud($title){
 <head>
 
 	<title><?php echo $title ?></title>
+	<meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" type="text/css" href="../../../style.css">
+  <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'>
 	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
-	<link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'>
-	<link rel="stylesheet" type="text/css" href="../../../style.css">
-
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
 	<script src="https://kit.fontawesome.com/53dc4b1d0b.js" crossorigin="anonymous"></script>
 
 	<style type="text/css">
@@ -237,10 +284,31 @@ function getDataKamar($id_kamar)
   return $db->query($sql);
 }
 
+<<<<<<< HEAD
 function getDataPenghuni($id_penghuni)
 {
   $db = dbConnect();
   $sql = "SELECT * FROM penghuni WHERE id_penghuni = '$id_penghuni'";
+=======
+function getPenghuni()
+{
+  $db = dbConnect();
+  $sql = "SELECT * FROM penghuni";
+  return $db->query($sql);
+}
+
+function getDataSewa($id_penghuni)
+{
+  $db = dbConnect();
+  $sql = "SELECT * FROM sewa WHERE id_penghuni = '$id_penghuni'";
+  return $db->query($sql);
+}
+
+function getPenjaga()
+{
+  $db = dbConnect();
+  $sql = "SELECT * FROM penjaga";
+>>>>>>> b93359428a99e3e3ed51e880d93dba3f5d6f9eb7
   return $db->query($sql);
 }
 ?>

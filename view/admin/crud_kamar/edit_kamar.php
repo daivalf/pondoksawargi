@@ -20,7 +20,7 @@
 <body>
 	<h1>Ubah Data Kamar</h1>
 	<center>
-		<form action="edit.php" method="post">
+		<form action="edit.php" method="post" id="form">
 			<table class="table table-borderless mt-4" style="width: 70%; font-size: 22px">
 				<tr>
 					<td width="35%">Id Kamar</td>
@@ -51,7 +51,8 @@
 					<td></td>
 					<td align="right">
 						<a href="../kamar.php" class="btn btn-primary">Kembali</a>
-						<input type="submit" name="simpan" class="btn btn-success" value="Simpan">
+						<a class="btn btn-success konfirmUbah" name="simpan">Simpan</a>
+						<!-- <input type="submit" name="simpan" class="btn btn-success konfirmUbah" value="Simpan"> -->
 					</td>
 				</tr>
 			</table>
@@ -59,3 +60,19 @@
 	</center>
 </table>
 </html>
+
+<script>
+	document.querySelector(".konfirmUbah").addEventListener('click', function(){
+  	Swal.fire({
+		  title: 'Apakah anda yakin akan menyimpan perubahan pada data kamar??',
+		  showCancelButton: true,
+		  confirmButtonText: 'Simpan',
+		  cancelButtonText: `Batal`,
+		}).then((result) => {
+		  /* Read more about isConfirmed, isDenied below */
+		  if (result.isConfirmed) {
+		  	document.getElementById("form").submit();
+		  }
+		})
+	});
+</script>
