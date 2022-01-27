@@ -236,4 +236,11 @@ function getDataKamar($id_kamar)
   $sql = "SELECT * FROM kamar WHERE id_kamar = '$id_kamar'";
   return $db->query($sql);
 }
+
+function getDataPenghuni($id_penghuni)
+{
+  $db = dbConnect();
+  $sql = "SELECT * FROM penghuni WHERE id_penghuni = '$id_penghuni'";
+  return $db->query($sql);
+}
 ?>

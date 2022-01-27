@@ -83,7 +83,7 @@
             <th>Nomor Wali</th>
             <th>Nama Wali</th>
             <th>Status Aktif</th>
-            <th>Edit/Hapus</th>
+            <th colspan="2">Aksi</th>
           </tr>
   
                     <?php
@@ -102,14 +102,12 @@
             <td><?php echo $datadiri["nama_wali"];?></td>
             <td align="center"><?php echo $datadiri["status_aktif"];?></td>
   
-            <td><div><a href="crud_penghuni/edit_penghuni.php" class="btn btn-primary"><i class="fa fa-pen"></i></a>
+            <td><div><a href="crud_penghuni/edit_penghuni.php?id_penghuni=<?php echo $datadiri["id_penghuni"]; ?>" class="btn btn-primary"><i class="fa fa-pen"></i></a>
           </td>
           <td>
-          <form method="post">
           <a href="penghuni.php?id_penghuni=<?php echo $datadiri["id_penghuni"]; ?>">
           <button class="btn btn-danger" type="submit" name="TblHapus"><i class="fa fa-trash"></i></button>
           </a>
-          </form>
           </div>
           </td>
           </tr>
@@ -167,7 +165,7 @@
           <td><?php echo $datadiri["nama_wali"];?></td>
           <td align="center"><?php echo $datadiri["status_aktif"];?></td>
 
-          <td><div><a href="crud_penghuni/edit_penghuni.php" class="btn btn-primary"><i class="fa fa-pen"></i></a>
+          <td><div><a href="crud_penghuni/edit_penghuni.php?id_penghuni=<?php echo $datadiri["id_penghuni"]; ?>" class="btn btn-primary"><i class="fa fa-pen"></i></a>
           </td>
           <td>
           <a href="penghuni.php?id_penghuni=<?php echo $datadiri["id_penghuni"]; ?>">
