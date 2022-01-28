@@ -27,7 +27,7 @@
 <div class="container mt-3">
 
   <p class="fs-1">Ubah Data Penghuni</p>
-  <form action="edit.php" method="post">
+  <form action="edit.php" method="post" id="form">
   <table class="table table-borderless" style="font-size: 20px; width: 80%">
   <tr><td width="55%">Id Penghuni</td>
       <td>Jenis Kelamin</td></tr>
@@ -64,8 +64,24 @@
 			</select></td></tr>
 
     <tr><td></td><td align="right"><a href="../penghuni.php" type="button" class="btn btn-primary btn-lg">Kembali</a>
-                      <input type="submit" name="simpan" value="Simpan" class="btn btn-success btn-lg"></td></tr>
+            <a class="btn btn-success konfirmUbah btn-lg" name="simpan">Simpan</a></td></tr>
+                      <!-- <input type="submit" name="simpan" class="btn btn-success konfirmUbah" value="Simpan"> -->
   </form>
   </table>
 </div>
 </html>
+<script>
+	document.querySelector(".konfirmUbah").addEventListener('click', function(){
+  	Swal.fire({
+		  title: 'Apakah anda yakin akan menyimpan perubahan pada data penghuni??',
+		  showCancelButton: true,
+		  confirmButtonText: 'Simpan',
+		  cancelButtonText: `Batal`,
+		}).then((result) => {
+		  /* Read more about isConfirmed, isDenied below */
+		  if (result.isConfirmed) {
+		  	document.getElementById("form").submit();
+		  }
+		})
+	});
+</script>
