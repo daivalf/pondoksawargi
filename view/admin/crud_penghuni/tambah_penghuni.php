@@ -28,16 +28,8 @@
                         <tr><td><input name="id_penghuni" class="form-control" type="text" required="">
                             <td><select name="jenis_kelamin" class="form-select" required="">
                                 <option align=center value="">--Jenis Kelamin--</option>
-                                <?php
-                                    $dataPenghuni = getPenghuni();
-                                    foreach ($dataPenghuni as $row){
-
-                                        echo "<option ".$selected." value=".$row["id_penghuni"].">".
-                                        $row["jenis_kelamin"]."</option>";
-
-                                    }
-                                ?>
-                                </select></td>
+                                <option>Pria</option>
+                                <option>Wanita</option></td>
                         
                         <tr><td>Nama Penghuni</td>
                             <td>Nomor KTP</td>
@@ -58,7 +50,13 @@
                             </td></tr>
 
                         <tr><td>Tanggal Lahir</td>
+                            <td>Status Keaktifan</td>
                         <tr><td><input name="tgl_lahir" class="form-control" type="date" required="">
+                        <td><select name="status_aktif" class="form-select" required="">
+                                <option align=center value="">--Status Aktif--
+                                <option>Aktif</option>
+                                <option>Tidak</option>
+                                </select></td>
                             </td></tr>
                             
                             <tr>

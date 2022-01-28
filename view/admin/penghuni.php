@@ -22,6 +22,15 @@
       <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
       <script type="text/javascript" src="js/sweethapus.js"></script>
   <body>
+    <?php
+      if(isset($_GET["status"])) {
+        $status = $_GET["status"];
+        if($status == 1){
+          showSuksesCRUD("Data Penghuni Berhasil<br>Ditambahkan");
+        }
+      }
+
+    ?>
       <div class="container mt-3">
       
 <h1>Data Penghuni</h1>
