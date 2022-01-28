@@ -151,25 +151,25 @@ function showErrorUnknown()
 	<?php
 }
 
-function showSuksesEdit()
+function showSuksesCRUD($pesan)
 {
 	?>
 	<script>
-	Swal.fire(
-  			'Perubahan Data Kamar Berhasil',
+	Swal.fire( 
+  			'<?php echo $pesan ?>',
   			'',
-			'success'
+				'success'
 	);
 	</script>
 	<?php
 }
 
-function showGagalEdit()
+function showGagalCRUD($tabel)
 {
 	?>
 	<script>
 	Swal.fire(
-  			'Data Kamar Tidak Berubah!',
+  			'Data <?php echo $tabel ?> Tidak Berubah!',
   			'',
 			'warning'
 	);
@@ -210,6 +210,22 @@ function sidebar($title){
 	<style type="text/css">
 		h1{
 			font-weight: bold;
+		}
+
+		.swal2-popup {
+		  font-family: Montserrat;
+		}
+
+		.swal2-title {
+		  font-size: 1.5rem
+		}
+
+		.swal2-confirm	{
+			background: #0d6efd !important;
+		}
+
+		.swal2-confirm:hover	{
+			background: #2647ff !important;
 		}
 	</style>
 </head>
@@ -260,6 +276,22 @@ function sidebar_crud($title){
 			font-weight: bold;
 			margin-top: 3%;
 		}
+
+		.swal2-popup {
+		  font-family: Montserrat;
+		}
+
+		.swal2-title {
+		  font-size: 1.5rem
+		}
+
+		.swal2-confirm	{
+			background: #0d6efd !important;
+		}
+
+		.swal2-confirm:hover	{
+			background: #2647ff !important;
+		}
 	</style>
 </head>
 	<!-- sidebar -->
@@ -284,12 +316,14 @@ function getDataKamar($id_kamar)
   return $db->query($sql);
 }
 
-<<<<<<< HEAD
+
 function getDataPenghuni($id_penghuni)
 {
   $db = dbConnect();
   $sql = "SELECT * FROM penghuni WHERE id_penghuni = '$id_penghuni'";
-=======
+  return $db->query($sql);
+}
+
 function getPenghuni()
 {
   $db = dbConnect();
@@ -308,7 +342,6 @@ function getPenjaga()
 {
   $db = dbConnect();
   $sql = "SELECT * FROM penjaga";
->>>>>>> b93359428a99e3e3ed51e880d93dba3f5d6f9eb7
   return $db->query($sql);
 }
 ?>

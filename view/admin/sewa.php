@@ -22,7 +22,18 @@
 <div class="container mt-3">
 
   <h1>Data Sewa</h1>
-
+  <?php 
+      if (isset($_GET["status"])) {
+        $status = $_GET["status"];
+        if ($status == 1) {
+          showSuksesCrud("Perubahan Data Sewa Berhasil Disimpan");
+        } else if ($status == 2){
+          showGagalCrud("Sewa");
+        } else if ($status == 3){
+          showSuksesCrud("Data Sewa Berhasil<br>Ditambahkan");
+        }
+      }
+  ?>
   <table class="table table-borderedless" >
       
   <tr>

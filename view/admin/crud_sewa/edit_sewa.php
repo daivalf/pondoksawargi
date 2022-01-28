@@ -24,7 +24,7 @@
 <div class="container mt-3">
 
   <h1>Ubah Data Sewa</h1>
-  <form action="crud_sewa.php" method="post">
+  <form action="crud_sewa.php" method="post" id="form">
     <center>
     <table class="table table-borderless mt-4" style="font-size: 22px; width: 70%">
         <input type="hidden" name="tempIdPenghuni" <?php echo "value='".$id_penghuni."'" ?>>
@@ -87,11 +87,28 @@
 
       <tr>
         <td></td>
-        <td><a href="../sewa.php" type="button" class="btn btn-primary">Kembali</a>
-            <input type="submit" class="btn btn-success" value="Simpan" name="simpanEditSewa"></input>
+        <td align="right"><a href="../sewa.php" type="button" class="btn btn-primary btn-lg">Kembali</a>
+            <a class="btn btn-success konfirmUbah btn-lg" name="simpanEditSewa">Simpan</a>
         </td></tr>
     </table>
     </center>
   </form>
 </div>
 </html>
+
+<script>
+  document.querySelector(".konfirmUbah").addEventListener('click', function(){
+    Swal.fire({
+      title: 'Apakah anda yakin akan menyimpan perubahan pada data sewa??',
+      showCancelButton: true,
+      confirmButtonText: 'Simpan',
+      cancelButtonText: `Batal`,
+      icon: 'question'
+    }).then((result) => {
+      /* Read more about isConfirmed, isDenied below */
+      if (result.isConfirmed) {
+        document.getElementById("form").submit();
+      }
+    })
+  });
+</script>

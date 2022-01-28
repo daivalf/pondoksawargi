@@ -50,8 +50,8 @@
 					<td></td>
 					<td></td>
 					<td align="right">
-						<a href="../kamar.php" class="btn btn-primary">Kembali</a>
-						<a class="btn btn-success konfirmUbah" name="simpan">Simpan</a>
+						<a href="../kamar.php" class="btn btn-primary btn-lg">Kembali</a>
+						<a class="btn btn-success konfirmUbah btn-lg" name="simpan">Simpan</a>
 						<!-- <input type="submit" name="simpan" class="btn btn-success konfirmUbah" value="Simpan"> -->
 					</td>
 				</tr>

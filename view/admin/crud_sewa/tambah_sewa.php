@@ -74,8 +74,8 @@
 
       <tr>
         <td></td>
-        <td><a href="../sewa.php" type="button" class="btn btn-primary">Kembali</a>
-            <input type="submit" class="btn btn-success" value="Simpan" name="simpanTambahSewa"></input>
+        <td align="right"><a href="../sewa.php" type="button" class="btn btn-primary btn-lg">Kembali</a>
+            <input type="submit" class="btn btn-success btn-lg" value="Simpan" name="simpanTambahSewa"></input>
         </td></tr>
     </table>
     </center>

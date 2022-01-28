@@ -8,7 +8,7 @@
 <?php 
 	include("../../../functions.php");
 
-	if (isset($_POST["simpanEditSewa"])) {
+	if (isset($_POST["tempIdPenghuni"])) {
 		$db = dbConnect();
 		$tempIdPenghuni	= $db->escape_string($_POST["tempIdPenghuni"]);
 		$id_penghuni		= $db->escape_string($_POST["id_penghuni"]);
@@ -50,9 +50,9 @@
 		$res = $db->query($sql);
 
 		if ($db->affected_rows > 0) {
-			header("Location: ../sewa.php?status=1");
-		} else {
+			header("Location: ../sewa.php?status=3");
+		}/* else {
 			header("Location: ../sewa.php?status=2");
-		}
+		}*/
 	}
  ?>

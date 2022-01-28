@@ -18,19 +18,19 @@
 	<?php sidebar("Data Kamar"); ?>
 </head>
 <body>
-	<h1>Data Kamar</h1>
+	<h1 class="container">Data Kamar</h1>
 	<center>
 		<?php 
 			if (isset($_GET["status"])) {
 				$status = $_GET["status"];
 				if ($status == 1) {
-					showSuksesEdit();
+					showSuksesCrud("Perubahan Data Kamar Berhasil Disimpan");
 				} else {
-					showGagalEdit();
+					showGagalCrud("Kamar");
 				}
 			}
 		 ?>
-		<table class="table table-bordered <?php if (isset($_GET["status"])) {echo "";} else echo "mt-4"; ?>" style="width: 80%">
+		<table class="table table-bordered mt-5" style="width: 80%">
 				<tr align="center" class="bg-dark text-white">
 					<th>Id Kamar</th>
 					<th>Tipe</th>
