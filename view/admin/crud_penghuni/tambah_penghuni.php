@@ -63,7 +63,7 @@
                             
                             <tr>
                             <td></td>
-                            <td align="right"><a href="../tambah.php" type="button" class="btn btn-primary btn-lg">Kembali</a>
+                            <td align="right"><a href="../penghuni.php" type="button" class="btn btn-primary btn-lg">Kembali</a>
                             <input type="submit" class="btn btn-success btn-lg" value="Simpan" name="simpanTambahPenghuni"></input>
                             </td></tr>
                     </table>
