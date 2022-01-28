@@ -26,6 +26,9 @@
       if(isset($_GET["status"])) {
         $status = $_GET["status"];
         if($status == 1){
+          showSuksesCRUD("Data Penghuni Berhasil<br>Diedit");
+        }
+        if($status == 2){
           showSuksesCRUD("Data Penghuni Berhasil<br>Ditambahkan");
         }
       }

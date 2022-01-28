@@ -36,7 +36,7 @@
     $res = $db->query($sql);
     
     if ($db->affected_rows > 0) {
-        header("Location: ../penghuni.php?status=1");
+        header("Location: ../penghuni.php?status=2");
     }
     }
 
