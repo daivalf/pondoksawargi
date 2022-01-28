@@ -1,49 +1,72 @@
-<?php 	
-	include("../../../functions.php");
- ?>
- <head>
- <!DOCTYPE html>
-<html>
-<title></title>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/js/bootstrap-datepicker.min.js"></script>
-  </head>
+<?php
+    session_start();
+    if (!isset($_SESSION["id_penjaga"]))
+    {
+        header("Location: ../../login.php?error=4");
+    }
+?>
 
-  <body>
-<div class="container mt-3">
+<?php
+    include("../../../functions.php");
+?>
 
-  <p class="fs-1">Tambah Data Penghuni</p>
+<head>
+    <!DOCTYPE html>
+        <html>
+            <?php sidebar_crud("Tambah Data Penghuni"); ?>
+        </html>
+</head>
 
-  <table class="table table-borderless">
-  <tr><td>Id Penghuni</td>
-          <td>Jenis Kelamin</td></tr>
-      <tr><td><input name="" type="text"></input></td>
-          <td><input name="" type="text"></input></td></tr>
+<body>
+    <div class="container-mt-3">
+        <h1>Tambah Data Penghuni</h1>
+            <form action="crud_penghuni.php" method="post">
+                <center>
+                    <table class="table table-borderless mt-4" style="font-size: 22px; width: 70%">
+                        <tr><td>Id Penghuni</td>
+                            <td>Jenis Kelamin</td></tr>
+                        <tr><td><input name="id_penghuni" class="form-control" type="text" required="">
+                            <td><select name="jenis_kelamin" class="form-select" required="">
+                                <option align=center value="">--Jenis Kelamin--</option>
+                                <?php
+                                    $dataPenghuni = getPenghuni();
+                                    foreach ($dataPenghuni as $row){
 
-      <tr><td>Nama Penghuni</td>
-          <td>Nomor Ktp</td>
-      <tr><td><input name="" type="text"></input></td>
-          <td><input name="" type="text"></input></td></tr>
+                                        echo "<option ".$selected." value=".$row["id_penghuni"].">".
+                                        $row["jenis_kelamin"]."</option>";
 
-      <tr><td>Nomor Telepon</td>
-          <td>Nomor Telepon</td>
-      <tr><td><input name="" type="text"></input></td>
-          <td><input name="" type="text"></input></td></tr>
+                                    }
+                                ?>
+                                </select></td>
+                        
+                        <tr><td>Nama Penghuni</td>
+                            <td>Nomor KTP</td>
+                        <tr><td><input name="nama_penghuni" class="form-control" type="text" required="">
+                            <td><input name="no_ktp" class="form-control" type="text" required="">
+                            </td></tr>     
+                            
+                        <tr><td>Nomor Telepon</td>
+                            <td>Nomor Telepon Wali</td>
+                        <tr><td><input name="no_telp" class="form-control" type="text" required="">
+                            <td><input name="no_telp_wali" class="form-control" type="text" required="">
+                            </td></tr>
 
-        <tr><td>Alamat Asal</td>
-            <td>Nama Wali</td>
-        <tr><td><input name="" type="text"></input></td>
-            <td><input name="" type="text"></input></td></tr>
-            
-        <tr><td>Tanggal Lahir</td></tr>
-        <tr><td><input name="" type="date"></input></td>
+                        <tr><td>Alamat Asal</td>
+                            <td>Nama Wali</td>
+                        <tr><td><input name="alamat_asal" class="form-control" type="text" required="">
+                            <td><input name="nama_wali" class="form-control" type="text" required="">
+                            </td></tr>
 
-    <tr><td></td><td><a href="../penghuni.php" type="button" class="btn btn-outline-secondary btn-lg">Kembali</a>
-                      <a href="" type="button" class="btn btn-outline-secondary btn-lg">Simpan</a></td></tr>
-
-  </table>
-</div>
-</html>
+                        <tr><td>Tanggal Lahir</td>
+                        <tr><td><input name="tgl_lahir" class="form-control" type="date" required="">
+                            </td></tr>
+                            
+                            <tr>
+                            <td></td>
+                            <td align="right"><a href="../tambah.php" type="button" class="btn btn-primary btn-lg">Kembali</a>
+                            <input type="submit" class="btn btn-success btn-lg" value="Simpan" name="simpanTambahPenghuni"></input>
+                            </td></tr>
+                    </table>
+                </center>
+    </div>
+</body>
