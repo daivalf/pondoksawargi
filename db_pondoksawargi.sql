@@ -1,14 +1,13 @@
 -- phpMyAdmin SQL Dump
--- version 4.9.0.1
+-- version 5.1.0
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jan 24, 2022 at 04:34 AM
--- Server version: 10.4.6-MariaDB
--- PHP Version: 7.1.32
+-- Generation Time: Jan 29, 2022 at 05:27 AM
+-- Server version: 10.4.18-MariaDB
+-- PHP Version: 8.0.3
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
-SET AUTOCOMMIT = 0;
 START TRANSACTION;
 SET time_zone = "+00:00";
 
@@ -40,9 +39,26 @@ CREATE TABLE `kamar` (
 --
 
 INSERT INTO `kamar` (`id_kamar`, `tipe`, `harga_tahunan`, `status_ketersediaan`) VALUES
-('LNT1B1', 'Tipe B', 9500000, 'Tidak'),
-('LNT2A10', 'Tipe A', 10500000, 'Tersedia'),
-('LNT2A12', 'Tipe A', 10500000, 'Tidak');
+('A01', 'Tipe A', 9500000, 'Tersedia'),
+('A02', 'Tipe A', 9500000, 'Tersedia'),
+('A03', 'Tipe A', 9500000, 'Tersedia'),
+('A04', 'Tipe A', 9500000, 'Tersedia'),
+('A05', 'Tipe A', 9500000, 'Tersedia'),
+('A06', 'Tipe A', 9500000, 'Tersedia'),
+('A07', 'Tipe A', 9500000, 'Tersedia'),
+('A08', 'Tipe A', 9500000, 'Tersedia'),
+('B01', 'Tipe B', 10500000, 'Tersedia'),
+('B02', 'Tipe B', 10500000, 'Tersedia'),
+('B03', 'Tipe B', 10500000, 'Tersedia'),
+('B04', 'Tipe B', 10500000, 'Tersedia'),
+('B05', 'Tipe B', 10500000, 'Tersedia'),
+('B06', 'Tipe B', 10500000, 'Tersedia'),
+('B07', 'Tipe B', 10500000, 'Tersedia'),
+('B08', 'Tipe B', 10500000, 'Tersedia'),
+('B09', 'Tipe B', 10500000, 'Tersedia'),
+('B10', 'Tipe B', 10500000, 'Tersedia'),
+('B11', 'Tipe B', 10500000, 'Tersedia'),
+('B12', 'Tipe B', 10500000, 'Tersedia');
 
 -- --------------------------------------------------------
 
@@ -68,9 +84,10 @@ CREATE TABLE `penghuni` (
 --
 
 INSERT INTO `penghuni` (`id_penghuni`, `nama_penghuni`, `no_telp`, `alamat_asal`, `tanggal_lahir`, `jenis_kelamin`, `no_ktp`, `no_telp_wali`, `nama_wali`, `status_aktif`) VALUES
-('101Z', 'Zaqi', '089632099762', 'Jalan kampung cina no.55 kabupaten indramayu', '2001-02-22', 'Pria', '11122202010004', '0819928851991', 'Asep balon', 'Aktif'),
-('210A', 'Akmal Rizkulloh', '08122344122', 'baturaden no.99 kabupaten tasikmalaya', '2001-11-15', 'Pria', '1314041511010005', '087332557677', 'Angela Chan', 'Tidak'),
-('212D', 'Diaz Nugraha', '081223341543', 'kampung durian runtuh kota tasik no.69', '2001-06-09', 'Pria', '1314020906010013', '08532551299', 'Ayaneru wangi', 'Aktif');
+('PA012020', 'Zulhaqi', '089632019762', 'Jalan Pabean No. 29, Rt. 06, Rw. 07, Indramayu', '2001-01-11', 'Pria', '3175808098743621', '089632019876', 'Asep', 'Aktif'),
+('PB082021', 'Rifki', '082218081639', 'Jalan Pangestu No. 93, Rt. 10, Rw. 12, Tasik', '2001-09-12', 'Pria', '3174898937468019', '082218083521', 'Kautsar', 'Aktif'),
+('PB102020', 'Akmal', '081394802341', 'Jalan Sukaratu No. 02, Rt. 06, Rw. 08, Indihiang', '2001-11-15', 'Pria', '3178984728289890', '081394804637', 'Rizqulloh', 'Aktif'),
+('PB122020', 'Diaz', '081322508258', 'Jalan Arthamulya VII No. 15, Rt. 05, Rw. 02, Tasik', '2001-06-09', 'Pria', '3176983890902746', '081322507364', 'Nugraha', 'Aktif');
 
 -- --------------------------------------------------------
 
@@ -90,7 +107,7 @@ CREATE TABLE `penjaga` (
 --
 
 INSERT INTO `penjaga` (`id_penjaga`, `nama_penjaga`, `no_telp`, `password`) VALUES
-('Admin1', 'Cucu Husdiana', '085222243899', 'cucu29c');
+('sawargi29c', 'Cucu Husdiana', '085222243899', 'cucu29c');
 
 -- --------------------------------------------------------
 
@@ -112,8 +129,10 @@ CREATE TABLE `sewa` (
 --
 
 INSERT INTO `sewa` (`id_penghuni`, `id_kamar`, `id_penjaga`, `tanggal_sewa`, `tanggal_perpanjangan`, `status_lunas`) VALUES
-('212D', 'LNT2A12', 'Admin1', '2021-01-16', '2022-01-16', 'Lunas'),
-('101Z', 'LNT1B1', 'Admin1', '2021-01-20', '2022-01-20', 'Belum');
+('PB102020', 'B10', 'sawargi29c', '2020-03-18', '2022-03-18', 'Lunas'),
+('PB122020', 'B12', 'sawargi29c', '2020-05-20', '2022-05-20', 'Lunas'),
+('PA012020', 'A01', 'sawargi29c', '2020-07-05', '2022-07-05', 'Lunas'),
+('PB082021', 'B08', 'sawargi29c', '2021-11-24', '2022-11-24', 'Lunas');
 
 --
 -- Indexes for dumped tables
@@ -155,7 +174,7 @@ ALTER TABLE `sewa`
 ALTER TABLE `sewa`
   ADD CONSTRAINT `sewa_ibfk_1` FOREIGN KEY (`id_kamar`) REFERENCES `kamar` (`id_kamar`) ON DELETE CASCADE ON UPDATE CASCADE,
   ADD CONSTRAINT `sewa_ibfk_2` FOREIGN KEY (`id_penghuni`) REFERENCES `penghuni` (`id_penghuni`) ON DELETE CASCADE ON UPDATE CASCADE,
-  ADD CONSTRAINT `sewa_ibfk_3` FOREIGN KEY (`id_penjaga`) REFERENCES `penjaga` (`id_penjaga`);
+  ADD CONSTRAINT `sewa_ibfk_3` FOREIGN KEY (`id_penjaga`) REFERENCES `penjaga` (`id_penjaga`) ON DELETE CASCADE ON UPDATE CASCADE;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

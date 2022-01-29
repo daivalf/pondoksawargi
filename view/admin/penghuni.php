@@ -143,7 +143,8 @@
                       p.no_telp_wali,
                       p.nama_wali,
                       p.status_aktif
-          FROM penghuni p";
+          FROM penghuni p
+          ORDER BY p.nama_penghuni";
         $res=$db->query($sql);
         if($res){
           ?>

@@ -78,7 +78,8 @@
                       JOIN kamar i
                       on p.id_kamar=i.id_kamar
                       WHERE k.nama_penghuni LIKE '%$dicari%' OR
-                            p.id_kamar LIKE '%$dicari%'";
+                            p.id_kamar LIKE '%$dicari%'
+                      ORDER BY k.nama_penghuni";
           $res=$db->query($sqlcari);
           if($res){
             ?>
@@ -133,7 +134,8 @@
           JOIN penghuni k 
           ON p.id_penghuni=k.id_penghuni
           JOIN kamar i
-          on p.id_kamar=i.id_kamar";
+          on p.id_kamar=i.id_kamar
+          ORDER BY k.nama_penghuni";
           
         $res=$db->query($sql);
         if($res){

@@ -62,11 +62,12 @@ function dbConnect()
 
 function showPin()
 {
+	$data = getPenjaga()->fetch_all(MYSQLI_ASSOC);
 	?>
 	<script>
 	Swal.fire(
   			'Kode pin berhasil diterima',
-  			'Password untuk akun Admin1 adalah cucu29c',
+  			'Password untuk akun sawargi29c adalah cucu29c',
 			'success'
 	);
 	</script>
@@ -305,7 +306,7 @@ function sidebar_crud($title){
 function getKamar()
 {
   $db = dbConnect();
-  $sql = "SELECT * FROM kamar ORDER BY status_ketersediaan";
+  $sql = "SELECT * FROM kamar ORDER BY id_kamar";
   return $db->query($sql);
 }
 
@@ -327,7 +328,7 @@ function getDataPenghuni($id_penghuni)
 function getPenghuni()
 {
   $db = dbConnect();
-  $sql = "SELECT * FROM penghuni";
+  $sql = "SELECT * FROM penghuni ORDER BY nama_penghuni";
   return $db->query($sql);
 }
 
