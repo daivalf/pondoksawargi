@@ -18,6 +18,23 @@
 	
 	<link rel="stylesheet" href="css/style.css">
 
+	<style type="text/css">
+		::-webkit-scrollbar{
+			width: 8px;
+		}
+
+		::-webkit-scrollbar-track{
+			background: #f1f1f1
+		}
+
+		::-webkit-scrollbar-thumb{
+			background: #DCDCDC;
+		}
+
+		::-webkit-scrollbar-thumb:hover{
+			background: #999;
+		}
+	</style>
 	</head>
 	<body>
 		<div class="container">
