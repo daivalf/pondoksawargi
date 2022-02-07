@@ -88,10 +88,10 @@
           <tr class="bg-dark text-white" align="center">
             <th>Nama Penghuni</th>
             <th>Nomor Telepon</th>
-            <th>Alamat Masuk</th>
+            <th>Alamat Asal</th>
             <th>Tanggal Lahir</th>
             <th>Jenis Kelamin</th>
-            <th>Nomer KTP</th>
+            <th>Nomor KTP</th>
             <th>Nomor Wali</th>
             <th>Nama Wali</th>
             <th>Status Aktif</th>
@@ -152,10 +152,10 @@
         <tr class="bg-dark text-white" align="center">
           <th>Nama Penghuni</th>
           <th>Nomor Telepon</th>
-          <th>Alamat Masuk</th>
+          <th>Alamat Asal</th>
           <th>Tanggal Lahir</th>
           <th>Jenis Kelamin</th>
-          <th>Nomer KTP</th>
+          <th>Nomor KTP</th>
           <th>Nomor Wali</th>
           <th>Nama Wali</th>
           <th>Status Aktif</th>
